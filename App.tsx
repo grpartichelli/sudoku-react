@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View , StatusBar} from 'react-native';
-
+import {COLORS } from './constants/colors';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Watermelon.</Text>
+      <Text style={styles.text}>Watermelon</Text>
       <StatusBar barStyle="light-content" />
     </View>
   );
@@ -13,12 +13,13 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#262322',
+    backgroundColor: COLORS.darkBackground,
     alignItems: 'center',
     justifyContent: 'center',
   },
   text : {
-    color: '#FFB4A2',
+    color: COLORS.lightPink,
     fontSize: 18,
   },
+
 });
