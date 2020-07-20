@@ -5,10 +5,16 @@ import RoundButton from './RoundButton';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Watermelon</Text>
-      <RoundButton />
       <StatusBar barStyle="light-content" />
-    </View>
+      <View style={styles.topContainer}>
+        <Text style={styles.text}>Watermelon Sudoku</Text>
+      </View >
+      <View style={styles.middleContainer}>
+        <RoundButton />
+        <RoundButton />
+      </View>
+      <View style={styles.bottomContainer}></View>
+    </View >
   );
 }
 
@@ -19,12 +25,27 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  topContainer: {
+    flex: 2,
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
+  ,
+  middleContainer: {
+    flex: 2,
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
+  ,
+  bottomContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+  },
   text: {
     color: COLORS.lightPink,
-    fontSize: 18,
-    //flex: 1,
-    //alignContent: "center",
-    //justifyContent: "center",
+    fontSize: 30,
+
   },
 
 });

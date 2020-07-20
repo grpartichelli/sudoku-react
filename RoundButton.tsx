@@ -11,7 +11,7 @@ export default class RoundButton extends React.Component {
                 style={styles.roundButton}
                 activeOpacity={.8}
             >
-                <Text style={styles.text}> Sugar High </Text>
+                <Text style={styles.text}> New Game </Text>
             </TouchableOpacity>)
     }
 }
@@ -21,16 +21,13 @@ export default class RoundButton extends React.Component {
 const styles = StyleSheet.create({
 
     roundButton: {
-        //flex: 1,
-        //alignContent: "center",
-        //justifyContent: "center",
-        padding: 15,
+        padding: 5,
         borderRadius: 20,
         backgroundColor: COLORS.lightPink,
+        margin: 10,
     },
     text: {
-
         color: COLORS.backgroundDark,
-        fontSize: 18,
+        fontSize: 22,
     },
 });
