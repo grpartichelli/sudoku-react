@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         backgroundColor: COLORS.lightPink,
         margin: 10,
+        alignItems: 'center'
     },
     text: {
         color: COLORS.backgroundDark,
