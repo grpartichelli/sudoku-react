@@ -10,6 +10,7 @@ export default class RoundButton extends React.Component {
             <TouchableOpacity
                 style={styles.roundButton}
                 activeOpacity={.8}
+
             >
                 <Text style={styles.text}> New game </Text>
             </TouchableOpacity>)
@@ -26,7 +27,8 @@ const styles = StyleSheet.create({
         backgroundColor: COLORS.backgroundDark,
         borderColor: COLORS.lightPink,
         borderWidth: 2,
-        margin: 10,
+        marginVertical: 10,
+        marginHorizontal: 45,
         alignItems: 'center'
     },
     text: {

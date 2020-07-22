@@ -1,7 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View, StatusBar } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, TouchableOpacity } from 'react-native';
 import { COLORS } from './constants/colors';
 import RoundButton from './RoundButton';
+
 
 //Some icons
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
@@ -12,9 +13,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" />
+
       <View style={styles.topContainer}>
         <Text style={styles.text}>Watermelon Sudoku</Text>
-
       </View >
 
       <View style={styles.middleTopContainer}>
@@ -25,10 +26,20 @@ export default function App() {
         <RoundButton />
         <RoundButton />
       </View>
+
       <View style={styles.bottomContainer}>
-        <FontAwesomeIcon name="cog" size={40} style={styles.bottomIcon} />
-        <IoniconIcon name="md-menu" size={40} style={styles.bottomIcon} />
-        <IoniconIcon name='md-color-palette' size={40} style={styles.bottomIcon} />
+        <TouchableOpacity onPress={() => { console.log("Settings Clicked") }} activeOpacity={.6}  >
+          <FontAwesomeIcon name="cog" size={40} style={styles.bottomIcon} />
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => { console.log("Menu Clicked") }} activeOpacity={.6}  >
+          <IoniconIcon name="md-menu" size={40} style={styles.bottomIcon} />
+        </TouchableOpacity >
+
+        <TouchableOpacity onPress={() => { console.log("Paint Clicked") }} activeOpacity={.6}>
+          <IoniconIcon name='md-color-palette' size={40} style={styles.bottomIcon} />
+        </TouchableOpacity>
+
       </View>
     </View >
   );
@@ -57,7 +68,7 @@ const styles = StyleSheet.create({
   }
   ,//New game and score buttons containers
   middleBottomContainer: {
-    flex: 2,
+    flex: 1.5,
     alignItems: 'stretch',
     justifyContent: 'center',
 
@@ -77,7 +88,11 @@ const styles = StyleSheet.create({
   },
   bottomIcon: {
     color: COLORS.lightPink,
+
+
   },
+
+
   watermelonIcon: {
 
     flex: 1
