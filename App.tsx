@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, StatusBar, TouchableOpacity } from 'react-native';
 import { COLORS } from './constants/colors';
-import RoundButton from './RoundButton';
+import RoundButton from './components/RoundButton';
 
 
 //Some icons
