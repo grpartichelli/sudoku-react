@@ -23,8 +23,8 @@ export default function App() {
       </View>
 
       <View style={styles.middleBottomContainer}>
-        <RoundButton />
-        <RoundButton />
+        <RoundButton text="New Game" color={COLORS.lightPink} backgroundColor={COLORS.darkBackground} />
+        <RoundButton text="Score" color={COLORS.lightPink} backgroundColor={COLORS.darkBackground} />
       </View>
 
       <View style={styles.bottomContainer}>
@@ -86,10 +86,9 @@ const styles = StyleSheet.create({
     fontSize: 30,
 
   },
+
   bottomIcon: {
     color: COLORS.lightPink,
-
-
   },
 
 
