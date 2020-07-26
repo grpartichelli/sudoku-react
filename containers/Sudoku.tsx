@@ -1,16 +1,13 @@
-import 'react-native-gesture-handler';
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
-import { COLORS } from "./constants/colors"
-import Home from "./containers/Home"
-import Sudoku from "./containers/Sudoku"
+import { COLORS } from "../constants/colors"
 
-export default function App() {
+
+export default function Sudoku() {
   return (
-
-
-    <Home />
-
+    <View style={styles.container}>
+      <Text style={styles.text}>Sudoku Page</Text>
+    </View>
   );
 }
 
@@ -25,4 +22,4 @@ const styles = StyleSheet.create({
     color: COLORS.lightPink,
     fontSize: 20
   }
-})
+})//Title container
