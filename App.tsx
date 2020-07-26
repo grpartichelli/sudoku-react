@@ -24,20 +24,20 @@ export default function App() {
 
       <View style={styles.middleBottomContainer}>
         <RoundButton text="New Game" color={COLORS.lightPink} backgroundColor={COLORS.darkBackground} />
-        <RoundButton text="Score" color={COLORS.lightPink} backgroundColor={COLORS.darkBackground} />
+        <RoundButton text="Resume" color={COLORS.lightPink} backgroundColor={COLORS.darkBackground} />
       </View>
 
       <View style={styles.bottomContainer}>
         <TouchableOpacity onPress={() => { console.log("Settings Clicked") }} activeOpacity={.6}  >
-          <FontAwesomeIcon name="cog" size={40} style={styles.bottomIcon} />
+          <FontAwesomeIcon name="cog" size={35} style={styles.bottomIcon} />
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => { console.log("Menu Clicked") }} activeOpacity={.6}  >
-          <IoniconIcon name="md-menu" size={40} style={styles.bottomIcon} />
+          <IoniconIcon name="md-menu" size={35} style={styles.bottomIcon} />
         </TouchableOpacity >
 
         <TouchableOpacity onPress={() => { console.log("Paint Clicked") }} activeOpacity={.6}>
-          <IoniconIcon name='md-color-palette' size={40} style={styles.bottomIcon} />
+          <IoniconIcon name='md-color-palette' size={35} style={styles.bottomIcon} />
         </TouchableOpacity>
 
       </View>

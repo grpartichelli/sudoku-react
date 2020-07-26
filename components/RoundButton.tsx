@@ -25,7 +25,7 @@ export default class RoundButton extends Component<RoundButtonProps> {
                 activeOpacity={.8}
 
             >
-                <Text style={{ fontSize: 22, color: this.props.color }}> {this.props.text}</Text>
+                <Text style={{ fontSize: 20, color: this.props.color }}> {this.props.text}</Text>
             </TouchableOpacity>)
     }
 }
@@ -35,14 +35,12 @@ export default class RoundButton extends Component<RoundButtonProps> {
 const styles = StyleSheet.create({
 
     roundButton: {
-        padding: 5,
+        padding: 2.5,
         borderRadius: 20,
-        borderWidth: 2,
+        borderWidth: 1,
         marginVertical: 10,
         marginHorizontal: 45,
         alignItems: 'center'
     },
-    text: {
-        fontSize: 22,
-    },
+
 });
