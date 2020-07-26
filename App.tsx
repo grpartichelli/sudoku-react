@@ -1,28 +1,32 @@
 import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
-import { COLORS } from "./constants/colors"
+
+//Exporting the pages
 import Home from "./containers/Home"
 import Sudoku from "./containers/Sudoku"
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
 
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{
+        headerShown: false
+      }}>
+        <Stack.Screen
+          name="HomePage"
+          component={Home}
 
-    <Home />
+        />
+        <Stack.Screen name="SudokuPage" component={Sudoku} />
+      </Stack.Navigator>
+    </NavigationContainer>
+
 
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: COLORS.darkBackground,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    color: COLORS.lightPink,
-    fontSize: 20
-  }
-})

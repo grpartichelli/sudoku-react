@@ -6,7 +6,7 @@ import { COLORS } from "../constants/colors"
 export default function Sudoku() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Sudoku Page</Text>
+      <Text style={styles.text}>Sudoku!</Text>
     </View>
   );
 }

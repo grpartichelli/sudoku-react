@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, TouchableOpacity, Text } from 'react-native';
-import { COLORS } from '../constants/colors';
+
 
 
 
@@ -8,6 +8,7 @@ interface RoundButtonProps {
     text?: string;
     backgroundColor?: string;
     color?: string;
+    onPress?: () => void;
 
 }
 
@@ -23,6 +24,7 @@ export default class RoundButton extends Component<RoundButtonProps> {
             <TouchableOpacity
                 style={[styles.roundButton, colorStyles]}
                 activeOpacity={.8}
+                onPress={this.props.onPress}
 
             >
                 <Text style={{ fontSize: 20, color: this.props.color }}> {this.props.text}</Text>

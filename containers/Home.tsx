@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, StatusBar, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, TouchableOpacity, Button } from 'react-native';
 import { COLORS } from '../constants/colors';
 import RoundButton from '../components/RoundButton';
 
@@ -9,7 +9,7 @@ import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import IoniconIcon from "react-native-vector-icons/Ionicons";
 import WatermelonIcon from '../assets/WatermelonIcon';
 
-export default function Home() {
+export default function Home({ navigation }) {
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" />
@@ -23,8 +23,11 @@ export default function Home() {
       </View>
 
       <View style={styles.middleBottomContainer}>
-        <RoundButton text="New Game" color={COLORS.lightPink} backgroundColor={COLORS.darkBackground} />
+        <RoundButton text="New Game" onPress={() =>
+          navigation.navigate("SudokuPage")
+        } color={COLORS.lightPink} backgroundColor={COLORS.darkBackground} />
         <RoundButton text="Resume" color={COLORS.lightPink} backgroundColor={COLORS.darkBackground} />
+
       </View>
 
       <View style={styles.bottomContainer}>
