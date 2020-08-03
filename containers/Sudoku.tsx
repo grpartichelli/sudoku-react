@@ -14,12 +14,12 @@ export default function Sudoku() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.darkBackground,
+    backgroundColor: COLORS.background,
     alignItems: 'center',
     justifyContent: 'center',
   },
   text: {
-    color: COLORS.lightPink,
+    color: COLORS.mainColor,
     fontSize: 20
   }
 })//Title container

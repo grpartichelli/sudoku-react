@@ -19,14 +19,14 @@ export default function Home({ navigation }) {
       </View >
 
       <View style={styles.middleTopContainer}>
-        <WatermelonIcon fill={COLORS.lightPink} style={styles.watermelonIcon} />
+        <WatermelonIcon fill={COLORS.mainColor} style={styles.watermelonIcon} />
       </View>
 
       <View style={styles.middleBottomContainer}>
         <RoundButton text="New Game" onPress={() =>
           navigation.navigate("SudokuPage")
-        } color={COLORS.lightPink} backgroundColor={COLORS.darkBackground} />
-        <RoundButton text="Resume" color={COLORS.lightPink} backgroundColor={COLORS.darkBackground} />
+        } color={COLORS.mainColor} backgroundColor={COLORS.background} />
+        <RoundButton text="Resume" color={COLORS.mainColor} backgroundColor={COLORS.background} />
 
       </View>
 
@@ -51,7 +51,7 @@ export default function Home({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.darkBackground,
+    backgroundColor: COLORS.background,
     alignItems: 'stretch',
     justifyContent: 'center',
   },//Title container
@@ -85,13 +85,13 @@ const styles = StyleSheet.create({
 
   },
   text: {
-    color: COLORS.lightPink,
+    color: COLORS.mainColor,
     fontSize: 30,
 
   },
 
   bottomIcon: {
-    color: COLORS.lightPink,
+    color: COLORS.mainColor,
   },
 
 

@@ -1,4 +1,4 @@
 export const COLORS = {
-  darkBackground: '#262322',
-  lightPink: '#FFB4A2',
+  background: '#262322',
+  mainColor: '#FFB4A2',
 }
