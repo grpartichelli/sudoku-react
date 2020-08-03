@@ -23,7 +23,7 @@ export default class RoundButton extends Component<RoundButtonProps> {
 
             <TouchableOpacity
                 style={[styles.roundButton, colorStyles]}
-                activeOpacity={.8}
+                activeOpacity={.5}
                 onPress={this.props.onPress}
 
             >
