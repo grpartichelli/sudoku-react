@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { COLORS } from "../constants/colors"
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+
+interface BottomButtonProps {
+  text?: string;
 
 
-class BottomButton extends Component {
+}
+
+class BottomButton extends Component<BottomButtonProps> {
   render() {
     return (
       <TouchableOpacity
@@ -12,7 +16,7 @@ class BottomButton extends Component {
         activeOpacity={.5}
         onPress={() => console.log("BottomButton pressed.")}
       >
-        <Text style={bottomStyles.bottomButtonText}> 1 </Text>
+        <Text style={bottomStyles.bottomButtonText}> {this.props.text} </Text>
       </TouchableOpacity>
     );
   }
@@ -25,19 +29,20 @@ const renderBottomButtons = () => {
     <View style={bottomStyles.container}>
       <View style={bottomStyles.topContainer}>
         <View style={bottomStyles.topContainerDiv}>
-          <BottomButton />
-          <BottomButton />
-          <BottomButton />
-          <BottomButton />
-          <BottomButton />
+          <BottomButton text='1' />
+          <BottomButton text='2' />
+          <BottomButton text='3' />
+          <BottomButton text='4' />
+          <BottomButton text='5' />
         </View>
         <View style={bottomStyles.topContainerDiv}>
-          <BottomButton />
-          <BottomButton />
-          <BottomButton />
-          <BottomButton />
-          <BottomButton />
+          <BottomButton text='6' />
+          <BottomButton text='7' />
+          <BottomButton text='8' />
+          <BottomButton text='9' />
+          <BottomButton text='X' />
         </View>
+
 
       </View>
       <View style={bottomStyles.bottomContainer}>
@@ -66,8 +71,7 @@ const bottomStyles = StyleSheet.create({
     alignItems: 'stretch',
     justifyContent: 'center',
     width: '80%',
-
-
+    margin: '4%'
   },
   topContainerDiv: {
     flex: 1,
@@ -85,14 +89,15 @@ const bottomStyles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   bottomButtonText: {
-    color: COLORS.mainColor,
-    fontSize: 35
+    color: COLORS.background,
+    fontSize: 32
   },
   bottomButton: {
     borderWidth: 2,
 
     paddingHorizontal: '2%',
-    borderColor: COLORS.mainColor,
+    borderColor: COLORS.background,
+    backgroundColor: COLORS.mainColor,
     marginHorizontal: '1%',
     borderRadius: 50,
 
