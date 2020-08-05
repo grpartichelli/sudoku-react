@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { COLORS } from "../constants/colors"
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+
 
 class BottomButton extends Component {
   render() {
@@ -22,23 +24,26 @@ const renderBottomButtons = () => {
   return (
     <View style={bottomStyles.container}>
       <View style={bottomStyles.topContainer}>
-        <View style={bottomStyles.bottomButtonContainer} >
+        <View style={bottomStyles.topContainerDiv}>
           <BottomButton />
-          <BottomButton />
-          <BottomButton />
-          <BottomButton />
-        </View>
-        <View style={bottomStyles.bottomButtonContainer}>
           <BottomButton />
           <BottomButton />
           <BottomButton />
           <BottomButton />
         </View>
+        <View style={bottomStyles.topContainerDiv}>
+          <BottomButton />
+          <BottomButton />
+          <BottomButton />
+          <BottomButton />
+          <BottomButton />
+        </View>
+
       </View>
       <View style={bottomStyles.bottomContainer}>
-        <Text style={styles.text}>More Icons Here</Text>
+        <Text style={{ fontSize: 20, color: COLORS.mainColor }}>Erase and Stuff</Text>
       </View>
-    </View>
+    </View >
 
 
   );
@@ -50,48 +55,47 @@ const bottomStyles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: COLORS.background,
-    alignItems: 'stretch',
+    alignItems: 'center',
     justifyContent: 'center',
+
+
   },
   topContainer: {
 
-    flex: 2,
+    flex: 3,
     alignItems: 'stretch',
     justifyContent: 'center',
-
+    width: '80%',
 
 
   },
+  topContainerDiv: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
+
+  },
+
+
   bottomContainer: {
-
     flex: 1,
-    alignItems: 'center',
+    alignItems: 'stretch',
     justifyContent: 'center',
-    flexDirection: 'row',
-
-
+    flexWrap: 'wrap',
   },
-  bottomButtonContainer: {
-
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'row',
-
-
-
-  },
-
   bottomButtonText: {
     color: COLORS.mainColor,
-    fontSize: 25
+    fontSize: 35
   },
   bottomButton: {
-    padding: 5,
-    marginHorizontal: 2.5,
     borderWidth: 2,
-    borderRadius: 100,
+
+    paddingHorizontal: '2%',
     borderColor: COLORS.mainColor,
+    marginHorizontal: '1%',
+    borderRadius: 50,
+
 
   },
 })
@@ -108,6 +112,7 @@ export default function Sudoku() {
       </View>
       <View style={styles.bottomContainer}>
         {renderBottomButtons()}
+
       </View>
     </View >
 
