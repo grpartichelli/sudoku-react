@@ -1,33 +1,11 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
-import { COLORS } from "../constants/colors"
-import BottomButton from "../components/BottomButton"
+import { Text, View, StyleSheet } from 'react-native';
+import { COLORS } from "../../constants/colors"
+import renderBottomButtons from "../components/SudokuInteractionButtons"
+import SudokuInteractionButtons from '../components/SudokuInteractionButtons';
 
-
-const renderBottomButtons = () => {
-
-
-  return (
-    <Text>HEY</Text>
-
-
-  );
-
-
-}
-
-const bottomStyles = StyleSheet.create({
-
-  topContainerDiv: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'row',
-
-  },
-
-})
-
+//Defines sudoku game size, 6 number = true.
+let SUDOKINHO = false;
 
 export default function Sudoku() {
   return (
@@ -48,22 +26,7 @@ export default function Sudoku() {
       are and the extra help buttons */}
       <View style={styles.bottomContainer}>
         <View style={styles.bottomTopContainer}>
-          <View style={bottomStyles.topContainerDiv}>
-            <BottomButton text='1' />
-            <BottomButton text='2' />
-            <BottomButton text='3' />
-            <BottomButton text='4' />
-            <BottomButton text='5' />
-          </View>
-          <View style={bottomStyles.topContainerDiv}>
-            <BottomButton text='6' />
-            <BottomButton text='7' />
-            <BottomButton text='8' />
-            <BottomButton text='9' />
-            <BottomButton text='X' />
-          </View>
-
-
+          <SudokuInteractionButtons sudokinho={SUDOKINHO} />
         </View>
         <View style={styles.bottomBottomContainer}>
           <Text style={{ fontSize: 15, color: COLORS.mainColor }}>Erase and Stuff</Text>

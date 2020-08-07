@@ -4,8 +4,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 
 //Exporting the pages
-import Home from "./containers/Home"
-import Sudoku from "./containers/Sudoku"
+import Home from "./src/screens/HomeScreen"
+import Sudoku from "./src/screens/SudokuScreen"
 
 const Stack = createStackNavigator();
 

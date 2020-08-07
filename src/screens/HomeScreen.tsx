@@ -1,13 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View, StatusBar, TouchableOpacity, Button } from 'react-native';
-import { COLORS } from '../constants/colors';
+import { COLORS } from '../../constants/colors';
 import RoundButton from '../components/RoundButton';
 
 
 //Some icons
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import IoniconIcon from "react-native-vector-icons/Ionicons";
-import WatermelonIcon from '../assets/WatermelonIcon';
+import WatermelonIcon from '../../assets/WatermelonIcon';
 
 export default function Home({ navigation }) {
   return (
