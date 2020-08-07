@@ -8,29 +8,7 @@ const renderBottomButtons = () => {
 
 
   return (
-    <View style={bottomStyles.container}>
-      <View style={bottomStyles.topContainer}>
-        <View style={bottomStyles.topContainerDiv}>
-          <BottomButton text='1' />
-          <BottomButton text='2' />
-          <BottomButton text='3' />
-          <BottomButton text='4' />
-          <BottomButton text='5' />
-        </View>
-        <View style={bottomStyles.topContainerDiv}>
-          <BottomButton text='6' />
-          <BottomButton text='7' />
-          <BottomButton text='8' />
-          <BottomButton text='9' />
-          <BottomButton text='X' />
-        </View>
-
-
-      </View>
-      <View style={bottomStyles.bottomContainer}>
-        <Text style={{ fontSize: 15, color: COLORS.mainColor }}>Erase and Stuff</Text>
-      </View>
-    </View >
+    <Text>HEY</Text>
 
 
   );
@@ -39,22 +17,7 @@ const renderBottomButtons = () => {
 }
 
 const bottomStyles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: COLORS.background,
-    alignItems: 'center',
-    justifyContent: 'center',
 
-
-  },
-  topContainer: {
-
-    flex: 3,
-    alignItems: 'stretch',
-    justifyContent: 'center',
-    width: '80%',
-    margin: '4%'
-  },
   topContainerDiv: {
     flex: 1,
     alignItems: 'center',
@@ -63,27 +26,48 @@ const bottomStyles = StyleSheet.create({
 
   },
 
-
-  bottomContainer: {
-    flex: 1,
-    alignItems: 'stretch',
-    justifyContent: 'center',
-    flexWrap: 'wrap',
-  }
 })
 
 
 export default function Sudoku() {
   return (
     <View style={styles.container}>
+
+
       <View style={styles.topContainer}>
         <Text style={styles.text}>Something Will Be Here</Text>
       </View>
+
+      {/* Sudoku game part */}
+
       <View style={styles.middleContainer}>
         <Text style={styles.text}>The Sudoku Game is Here</Text>
       </View>
+
+      {/* Bottom part where the buttom for the number 1-9 or 1-6 
+      are and the extra help buttons */}
       <View style={styles.bottomContainer}>
-        {renderBottomButtons()}
+        <View style={styles.bottomTopContainer}>
+          <View style={bottomStyles.topContainerDiv}>
+            <BottomButton text='1' />
+            <BottomButton text='2' />
+            <BottomButton text='3' />
+            <BottomButton text='4' />
+            <BottomButton text='5' />
+          </View>
+          <View style={bottomStyles.topContainerDiv}>
+            <BottomButton text='6' />
+            <BottomButton text='7' />
+            <BottomButton text='8' />
+            <BottomButton text='9' />
+            <BottomButton text='X' />
+          </View>
+
+
+        </View>
+        <View style={styles.bottomBottomContainer}>
+          <Text style={{ fontSize: 15, color: COLORS.mainColor }}>Erase and Stuff</Text>
+        </View>
 
       </View>
     </View >
@@ -118,10 +102,26 @@ const styles = StyleSheet.create({
   },
   bottomContainer: {
     flex: 2,
-    alignItems: 'stretch',
+    alignItems: 'center',
     justifyContent: 'center',
 
   },
+  bottomTopContainer: {
+
+    flex: 3,
+    alignItems: 'stretch',
+    justifyContent: 'center',
+    width: '80%',
+    margin: '4%'
+  },
+
+
+  bottomBottomContainer: {
+    flex: 1,
+    alignItems: 'stretch',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+  }
 
 
 })//Title container

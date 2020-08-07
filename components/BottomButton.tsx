@@ -29,7 +29,8 @@ const styles = StyleSheet.create({
     bottomButtonText: {
         color: COLORS.background,
         fontSize: 30,
-        padding: '1%'
+        paddingVertical: '1%',
+        paddingHorizontal: '1.5%'
     },
     bottomButton: {
 
