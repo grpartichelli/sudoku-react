@@ -1,26 +1,8 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { COLORS } from "../constants/colors"
+import BottomButton from "../components/BottomButton"
 
-interface BottomButtonProps {
-  text?: string;
-
-
-}
-
-class BottomButton extends Component<BottomButtonProps> {
-  render() {
-    return (
-      <TouchableOpacity
-        style={bottomStyles.bottomButton}
-        activeOpacity={.5}
-        onPress={() => console.log("BottomButton pressed.")}
-      >
-        <Text style={bottomStyles.bottomButtonText}> {this.props.text} </Text>
-      </TouchableOpacity>
-    );
-  }
-}
 
 const renderBottomButtons = () => {
 
@@ -46,7 +28,7 @@ const renderBottomButtons = () => {
 
       </View>
       <View style={bottomStyles.bottomContainer}>
-        <Text style={{ fontSize: 20, color: COLORS.mainColor }}>Erase and Stuff</Text>
+        <Text style={{ fontSize: 15, color: COLORS.mainColor }}>Erase and Stuff</Text>
       </View>
     </View >
 
@@ -87,22 +69,7 @@ const bottomStyles = StyleSheet.create({
     alignItems: 'stretch',
     justifyContent: 'center',
     flexWrap: 'wrap',
-  },
-  bottomButtonText: {
-    color: COLORS.background,
-    fontSize: 32
-  },
-  bottomButton: {
-    borderWidth: 2,
-
-    paddingHorizontal: '2%',
-    borderColor: COLORS.background,
-    backgroundColor: COLORS.mainColor,
-    marginHorizontal: '1%',
-    borderRadius: 50,
-
-
-  },
+  }
 })
 
 
