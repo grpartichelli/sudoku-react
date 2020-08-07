@@ -25,12 +25,9 @@ export default function Sudoku() {
       {/* Bottom part where the buttom for the number 1-9 or 1-6 
       are and the extra help buttons */}
       <View style={styles.bottomContainer}>
-        <View style={styles.bottomTopContainer}>
-          <SudokuInteractionButtons sudokinho={SUDOKINHO} />
-        </View>
-        <View style={styles.bottomBottomContainer}>
-          <Text style={{ fontSize: 15, color: COLORS.mainColor }}>Erase and Stuff</Text>
-        </View>
+
+        <SudokuInteractionButtons sudokinho={SUDOKINHO} />
+
 
       </View>
     </View >
@@ -69,22 +66,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
 
   },
-  bottomTopContainer: {
-
-    flex: 3,
-    alignItems: 'stretch',
-    justifyContent: 'center',
-    width: '80%',
-    margin: '4%'
-  },
 
 
-  bottomBottomContainer: {
-    flex: 1,
-    alignItems: 'stretch',
-    justifyContent: 'center',
-    flexWrap: 'wrap',
-  }
 
-
-})//Title container
+})
