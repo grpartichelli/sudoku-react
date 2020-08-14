@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import BottomButton from "./BottomButton"
+import BottomButton from "../components/BottomButton"
 import { View, StyleProp, ViewStyle, StyleSheet, Text } from "react-native"
 import { COLORS } from '../../constants/colors'
 

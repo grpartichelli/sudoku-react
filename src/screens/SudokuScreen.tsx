@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import { COLORS } from "../../constants/colors"
-import renderBottomButtons from "../components/SudokuInteractionButtons"
-import SudokuInteractionButtons from '../components/SudokuInteractionButtons';
+
+import SudokuInteractionButtons from '../containers/SudokuInteractionButtons';
+import SudokuBoard from '../containers/SudokuBoard';
 
 //Defines sudoku game size, 6 number = true.
 let SUDOKINHO = false;
@@ -19,16 +20,13 @@ export default function Sudoku() {
       {/* Sudoku game part */}
 
       <View style={styles.middleContainer}>
-        <Text style={styles.text}>The Sudoku Game is Here</Text>
+        <SudokuBoard sudokinho={SUDOKINHO} />
       </View>
 
       {/* Bottom part where the buttom for the number 1-9 or 1-6 
       are and the extra help buttons */}
       <View style={styles.bottomContainer}>
-
         <SudokuInteractionButtons sudokinho={SUDOKINHO} />
-
-
       </View>
     </View >
 
