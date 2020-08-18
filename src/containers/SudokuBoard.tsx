@@ -41,10 +41,11 @@ const renderBoard = (sudokinho: boolean) => {
     }
     let board = sudokinho ? test_board_small : test_board;
 
+    //Transforms the board in blocks
     let blocks = board.map((block, index) => {
         return <SudokuBlock key={index} text={"BLOCK"} sudokinho={sudokinho} content={block}></SudokuBlock>
     })
-
+    //Put them in grids(every 3 blocks )
     let sudoku_grid = _.chunk(blocks, 3).map((block, index) => {
         return <View key={index} style={divStyle as StyleProp<ViewStyle>}  >
             {block}
