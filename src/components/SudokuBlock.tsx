@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-import { Text, StyleSheet, View } from 'react-native';
+import { View, StyleProp, ViewStyle, StyleSheet, Text } from "react-native"
 import { COLORS } from "../../constants/colors"
 import SudokuCell from "./SudokuCell"
+import _ from 'lodash'
 
 interface SudokuBlockProps {
     sudokinho: boolean;
-    content?: string[];
-    text?: string;
+    content: string[];
+
 }
 
 
 
-const renderBlock = (sudokinho: boolean) => {
+const renderBlock = (sudokinho: boolean, content: string[]) => {
     const divStyle = {
         flex: 1,
         alignItems: 'stretch',
@@ -21,21 +22,23 @@ const renderBlock = (sudokinho: boolean) => {
 
     }
 
-    /*
-    const sudoku_grid = test_board.map((row, index) => {
 
-        const current_row = row.map((symbol, index) => <SudokuCell key={index} text={symbol} />)
-        return (<View key={index} style={divStyle as StyleProp<ViewStyle>} >
-            {current_row}
-        </ View>)
-
-
+    //Transforms the blocks in cells
+    let cells = content.map((value, index) => {
+        return <SudokuCell key={index} text={value}></SudokuCell>
     })
+    //Put them in grids(every 3 cells)
+    let sudoku_block = _.chunk(cells, 3).map((cell, index) => {
+        return <View key={index} style={divStyle as StyleProp<ViewStyle>}  >
+            {cell}
+        </View>
+    }
+    )
 
-    */
+
 
     return (
-        <Text style={styles.text}>BLOCK</Text>
+        sudoku_block
     );
 }
 
@@ -44,7 +47,7 @@ export default class SudokuBlock extends Component<SudokuBlockProps> {
         return (
             <View style={styles.container}>
 
-                {renderBlock(this.props.sudokinho)}
+                {renderBlock(this.props.sudokinho, this.props.content)}
 
             </View>
 
@@ -56,7 +59,7 @@ const styles = StyleSheet.create({
 
     container: {
         flex: 1,
-        alignItems: 'center',
+        alignItems: 'stretch',
         justifyContent: 'center',
         borderColor: COLORS.mainColor,
         borderWidth: 2,
