@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { View, StyleProp, ViewStyle, StyleSheet, Text } from "react-native"
 import { COLORS } from '../../constants/colors'
 import SudokuBlock from "../components/SudokuBlock"
+import _ from 'lodash'
 
 let test_board = [
     ["2", "3", " ", "9", "4", " ", "6", "7", " "],
@@ -13,6 +14,15 @@ let test_board = [
     ["7", " ", " ", "1", " ", " ", " ", " ", "9"],
     ["6", "5", "9", "8", "7", "2", "1", "4", "3"],
     ["3", " ", " ", " ", "9", " ", " ", " ", "7"]
+];
+
+let test_board_small = [
+    ["2", "3", " ", "9", "4", " "],
+    ["8", " ", " ", "3", "2", "5"],
+    ["9", " ", " ", "7", "6", " "],
+    ["1", " ", " ", " ", " ", " "],
+    ["5", " ", "3", "2", "1", " "],
+    ["4", " ", " ", "6", "8", " "],
 ];
 
 interface SudokuBoardProps {
@@ -29,23 +39,22 @@ const renderBoard = (sudokinho: boolean) => {
 
 
     }
+    let board = sudokinho ? test_board_small : test_board;
 
-    /*
-    const sudoku_grid = test_board.map((row, index) => {
-
-        const current_row = row.map((symbol, index) => <SudokuCell key={index} text={symbol} />)
-        return (<View key={index} style={divStyle as StyleProp<ViewStyle>} >
-            {current_row}
-        </ View>)
-
-
+    let blocks = board.map((block, index) => {
+        return <SudokuBlock key={index} text={"BLOCK"} sudokinho={sudokinho} content={block}></SudokuBlock>
     })
 
-    */
+    let sudoku_grid = _.chunk(blocks, 3).map((block, index) => {
+        return <View key={index} style={divStyle as StyleProp<ViewStyle>}  >
+            {block}
+        </View>
+    }
+    )
 
-    return (
-        <SudokuBlock text="BLOCK" sudokinho={sudokinho} />
-    );
+
+    return sudoku_grid;
+
 
 }
 
