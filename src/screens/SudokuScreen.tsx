@@ -52,10 +52,9 @@ const styles = StyleSheet.create({
 
   middleContainer: {
     flex: 4.5,
-    alignItems: 'center',
+    alignItems: 'stretch',
     justifyContent: 'center',
-    borderWidth: 3,
-    borderColor: COLORS.mainColor,
+
 
   },
   bottomContainer: {

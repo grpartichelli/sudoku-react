@@ -13,11 +13,11 @@ export default class SudokuCell extends Component<SudokuCellProps> {
     render() {
         return (
             <TouchableOpacity
-                style={styles.bottomButton}
+                style={styles.sudokuCell}
                 activeOpacity={.5}
-                onPress={() => console.log("BottomButton pressed.")}
+                onPress={() => console.log("sudokuCell pressed.")}
             >
-                <Text style={styles.bottomButtonText}> {this.props.text} </Text>
+                <Text style={styles.sudokuCellText}> {this.props.text} </Text>
             </TouchableOpacity>
         );
     }
@@ -25,20 +25,23 @@ export default class SudokuCell extends Component<SudokuCellProps> {
 
 const styles = StyleSheet.create({
 
-    bottomButtonText: {
-        color: COLORS.background,
-        fontSize: 30,
-        paddingVertical: '2%',
-        paddingHorizontal: '1.5%'
+    sudokuCellText: {
+        color: COLORS.mainColor,
+        fontSize: 20,
+
+
     },
-    bottomButton: {
+    sudokuCell: {
 
 
-        paddingHorizontal: '2%',
-        borderColor: COLORS.background,
-        backgroundColor: COLORS.mainColor,
-        marginHorizontal: '1.5%',
-        borderRadius: 50,
+        width: '11.11%',
+        height: '100%',
+        borderColor: COLORS.mainColor,
+        borderWidth: 2,
+        backgroundColor: COLORS.background,
+        textAlign: 'center',
+
+
 
 
     },
