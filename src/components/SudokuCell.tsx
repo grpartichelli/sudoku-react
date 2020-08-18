@@ -27,13 +27,16 @@ const styles = StyleSheet.create({
 
     sudokuCellText: {
         color: COLORS.mainColor,
-        fontSize: 20,
+        fontSize: 30,
+        alignSelf: 'center'
     },
     sudokuCell: {
+        flex: 1,
+        justifyContent: 'center',
+        margin: -1,
         borderColor: COLORS.mainColor,
-        borderWidth: 1,
-        backgroundColor: COLORS.background,
-        textAlign: 'center',
+        borderWidth: 2,
+
 
     },
 })
